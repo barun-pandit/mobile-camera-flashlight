@@ -1,0 +1,8 @@
+<ion-content padding class="home background">
+	<div class="row" style="height: 100%;">
+		<div class="col center">
+			<h4 center *ngIf="!isAvailable">Unable to detect Flashlight.</h4>
+			<ion-icon *ngIf="isAvailable" (click)="isOn ? off($event) : on($event)" [color]=" isOn ? 'secondary' : 'danger'" name="flash" style="font-size:15em;"></ion-icon>
+		</div>
+	</div>
+</ion-content>
